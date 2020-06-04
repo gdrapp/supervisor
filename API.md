@@ -240,29 +240,29 @@ The token can be made available for add-ons and Home Assistant using the `SUPERV
 
 - GET `/host/info`
 
-```json
-{
-  "hostname": "hostname|null",
-  "features": ["shutdown", "reboot", "hostname", "services", "hassos"],
-  "operating_system": "HassOS XY|Ubuntu 16.4|null",
-  "kernel": "4.15.7|null",
-  "chassis": "specific|null",
-  "deployment": "stable|beta|dev|null",
-  "cpe": "xy|null"
-}
-```
+  ```json
+  {
+    "hostname": "hostname|null",
+    "features": ["shutdown", "reboot", "hostname", "services", "hassos"],
+    "operating_system": "HassOS XY|Ubuntu 16.4|null",
+    "kernel": "4.15.7|null",
+    "chassis": "specific|null",
+    "deployment": "stable|beta|dev|null",
+    "cpe": "xy|null"
+  }
+  ```
 
 - GET `/host/logs`
 
-Return host dmesg
+  Returns host dmesg.
 
 - POST `/host/options`
 
-```json
-{
-  "hostname": ""
-}
-```
+  ```json
+  {
+    "hostname": ""
+  }
+  ```
 
 - POST `/host/reload`
 
