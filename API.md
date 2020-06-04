@@ -292,26 +292,26 @@ The token can be made available for add-ons and Home Assistant using the `SUPERV
 
 - GET `/os/info`
 
-```json
-{
-  "version": "2.3",
-  "version_latest": "2.4",
-  "board": "ova|rpi",
-  "boot": "rauc boot slot"
-}
-```
+  ```json
+  {
+    "version": "2.3",
+    "version_latest": "2.4",
+    "board": "ova|rpi",
+    "boot": "rauc boot slot"
+  }
+  ```
 
 - POST `/os/update`
 
-```json
-{
-  "version": "optional"
-}
-```
+  ```json
+  {
+    "version": "optional"
+  }
+  ```
 
 - POST `/os/config/sync`
 
-Load host configs from a USB stick.
+  Load host configs from a USB stick.
 
 ### Hardware
 
