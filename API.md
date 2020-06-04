@@ -270,17 +270,17 @@ The token can be made available for add-ons and Home Assistant using the `SUPERV
 
 - GET `/host/services`
 
-```json
-{
-  "services": [
-    {
-      "name": "xy.service",
-      "description": "XY ...",
-      "state": "active|"
-    }
-  ]
-}
-```
+  ```json
+  {
+    "services": [
+      {
+        "name": "xy.service",
+        "description": "XY ...",
+        "state": "active|"
+      }
+    ]
+  }
+  ```
 
 - POST `/host/service/{unit}/stop`
 
