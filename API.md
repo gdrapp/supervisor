@@ -439,116 +439,116 @@ The token can be made available for add-ons and Home Assistant using the `SUPERV
   }
   ```
 
-### RESTful for API add-ons
+### RESTful API for add-ons
 
 If an add-on will call itself, you can use `/addons/self/...`.
 
 - GET `/addons`
 
-Get all available add-ons.
+  Get all available add-ons.
 
-```json
-{
-  "addons": [
-    {
-      "name": "xy bla",
-      "slug": "xy",
-      "description": "description",
-      "advanced": "bool",
-      "stage": "stable|experimental|deprecated",
-      "repository": "core|local|REP_ID",
-      "version": "version_latest",
-      "installed": "none|INSTALL_VERSION",
-      "detached": "bool",
-      "available": "bool",
-      "build": "bool",
-      "url": "null|url",
-      "icon": "bool",
-      "logo": "bool"
-    }
-  ],
-  "repositories": [
-    {
-      "slug": "12345678",
-      "name": "Repitory Name|unknown",
-      "source": "URL_OF_REPOSITORY",
-      "url": "WEBSITE|REPOSITORY",
-      "maintainer": "BLA BLU <fla@dld.ch>|unknown"
-    }
-  ]
-}
-```
+  ```json
+  {
+    "addons": [
+      {
+        "name": "xy bla",
+        "slug": "xy",
+        "description": "description",
+        "advanced": "bool",
+        "stage": "stable|experimental|deprecated",
+        "repository": "core|local|REP_ID",
+        "version": "version_latest",
+        "installed": "none|INSTALL_VERSION",
+        "detached": "bool",
+        "available": "bool",
+        "build": "bool",
+        "url": "null|url",
+        "icon": "bool",
+        "logo": "bool"
+      }
+    ],
+    "repositories": [
+      {
+        "slug": "12345678",
+        "name": "Repitory Name|unknown",
+        "source": "URL_OF_REPOSITORY",
+        "url": "WEBSITE|REPOSITORY",
+        "maintainer": "BLA BLU <fla@dld.ch>|unknown"
+      }
+    ]
+  }
+  ```
 
 - POST `/addons/reload`
 - GET `/addons/{addon}/info`
 
-```json
-{
-  "name": "xy bla",
-  "slug": "xdssd_xybla",
-  "hostname": "xdssd-xybla",
-  "dns": [],
-  "description": "description",
-  "long_description": "null|markdown",
-  "auto_update": "bool",
-  "url": "null|url of addon",
-  "detached": "bool",
-  "available": "bool",
-  "advanced": "bool",
-  "stage": "stable|experimental|deprecated",
-  "arch": ["armhf", "aarch64", "i386", "amd64"],
-  "machine": "[raspberrypi2, tinker]",
-  "homeassistant": "null|min Home Assistant Core version",
-  "repository": "12345678|null",
-  "version": "null|VERSION_INSTALLED",
-  "version_latest": "version_latest",
-  "state": "none|started|stopped",
-  "boot": "auto|manual",
-  "build": "bool",
-  "options": "{}",
-  "schema": "{}|null",
-  "network": "{}|null",
-  "network_description": "{}|null",
-  "host_network": "bool",
-  "host_pid": "bool",
-  "host_ipc": "bool",
-  "host_dbus": "bool",
-  "privileged": ["NET_ADMIN", "SYS_ADMIN"],
-  "apparmor": "disable|default|profile",
-  "devices": ["/dev/xy"],
-  "udev": "bool",
-  "auto_uart": "bool",
-  "icon": "bool",
-  "logo": "bool",
-  "changelog": "bool",
-  "documentation": "bool",
-  "hassio_api": "bool",
-  "hassio_role": "default|homeassistant|manager|admin",
-  "homeassistant_api": "bool",
-  "auth_api": "bool",
-  "full_access": "bool",
-  "protected": "bool",
-  "rating": "1-6",
-  "stdin": "bool",
-  "webui": "null|http(s)://[HOST]:port/xy/zx",
-  "gpio": "bool",
-  "kernel_modules": "bool",
-  "devicetree": "bool",
-  "docker_api": "bool",
-  "video": "bool",
-  "audio": "bool",
-  "audio_input": "null|0,0",
-  "audio_output": "null|0,0",
-  "services_role": "['service:access']",
-  "discovery": "['service']",
-  "ip_address": "ip address",
-  "ingress": "bool",
-  "ingress_entry": "null|/api/hassio_ingress/slug",
-  "ingress_url": "null|/api/hassio_ingress/slug/entry.html",
-  "ingress_port": "null|int",
-  "ingress_panel": "null|bool"
-}
-```
+  ```json
+  {
+    "name": "xy bla",
+    "slug": "xdssd_xybla",
+    "hostname": "xdssd-xybla",
+    "dns": [],
+    "description": "description",
+    "long_description": "null|markdown",
+    "auto_update": "bool",
+    "url": "null|url of addon",
+    "detached": "bool",
+    "available": "bool",
+    "advanced": "bool",
+    "stage": "stable|experimental|deprecated",
+    "arch": ["armhf", "aarch64", "i386", "amd64"],
+    "machine": "[raspberrypi2, tinker]",
+    "homeassistant": "null|min Home Assistant Core version",
+    "repository": "12345678|null",
+    "version": "null|VERSION_INSTALLED",
+    "version_latest": "version_latest",
+    "state": "none|started|stopped",
+    "boot": "auto|manual",
+    "build": "bool",
+    "options": "{}",
+    "schema": "{}|null",
+    "network": "{}|null",
+    "network_description": "{}|null",
+    "host_network": "bool",
+    "host_pid": "bool",
+    "host_ipc": "bool",
+    "host_dbus": "bool",
+    "privileged": ["NET_ADMIN", "SYS_ADMIN"],
+    "apparmor": "disable|default|profile",
+    "devices": ["/dev/xy"],
+    "udev": "bool",
+    "auto_uart": "bool",
+    "icon": "bool",
+    "logo": "bool",
+    "changelog": "bool",
+    "documentation": "bool",
+    "hassio_api": "bool",
+    "hassio_role": "default|homeassistant|manager|admin",
+    "homeassistant_api": "bool",
+    "auth_api": "bool",
+    "full_access": "bool",
+    "protected": "bool",
+    "rating": "1-6",
+    "stdin": "bool",
+    "webui": "null|http(s)://[HOST]:port/xy/zx",
+    "gpio": "bool",
+    "kernel_modules": "bool",
+    "devicetree": "bool",
+    "docker_api": "bool",
+    "video": "bool",
+    "audio": "bool",
+    "audio_input": "null|0,0",
+    "audio_output": "null|0,0",
+    "services_role": "['service:access']",
+    "discovery": "['service']",
+    "ip_address": "ip address",
+    "ingress": "bool",
+    "ingress_entry": "null|/api/hassio_ingress/slug",
+    "ingress_url": "null|/api/hassio_ingress/slug/entry.html",
+    "ingress_port": "null|int",
+    "ingress_panel": "null|bool"
+  }
+  ```
 
 - GET `/addons/{addon}/icon`
 
@@ -560,31 +560,31 @@ Get all available add-ons.
 
 - POST `/addons/{addon}/options`
 
-```json
-{
-  "boot": "auto|manual",
-  "auto_update": "bool",
-  "network": {
-    "CONTAINER": "port|[ip, port]"
-  },
-  "options": {},
-  "audio_output": "null|0,0",
-  "audio_input": "null|0,0",
-  "ingress_panel": "bool"
-}
-```
+  ```json
+  {
+    "boot": "auto|manual",
+    "auto_update": "bool",
+    "network": {
+      "CONTAINER": "port|[ip, port]"
+    },
+    "options": {},
+    "audio_output": "null|0,0",
+    "audio_input": "null|0,0",
+    "ingress_panel": "bool"
+  }
+  ```
 
-Reset custom network/audio/options, set it `null`.
+  To reset customized network/audio/options, set it `null`.
 
 - POST `/addons/{addon}/security`
 
-This function is not callable by itself.
+  This function is not callable by itself.
 
-```json
-{
-  "protected": "bool"
-}
-```
+  ```json
+  {
+    "protected": "bool"
+  }
+  ```
 
 - POST `/addons/{addon}/start`
 
@@ -598,32 +598,32 @@ This function is not callable by itself.
 
 - GET `/addons/{addon}/logs`
 
-Output is the raw Docker log.
+  Output is the raw Docker log.
 
 - POST `/addons/{addon}/restart`
 
 - POST `/addons/{addon}/rebuild`
 
-Only supported for local build addons
+  Only supported for local build addons.
 
 - POST `/addons/{addon}/stdin`
 
-Write data to add-on stdin
+  Write data to add-on stdin.
 
 - GET `/addons/{addon}/stats`
 
-```json
-{
-  "cpu_percent": 0.0,
-  "memory_usage": 283123,
-  "memory_limit": 329392,
-  "memory_percent": 1.4,
-  "network_tx": 0,
-  "network_rx": 0,
-  "blk_read": 0,
-  "blk_write": 0
-}
-```
+  ```json
+  {
+    "cpu_percent": 0.0,
+    "memory_usage": 283123,
+    "memory_limit": 329392,
+    "memory_percent": 1.4,
+    "network_tx": 0,
+    "network_rx": 0,
+    "blk_read": 0,
+    "blk_write": 0
+  }
+  ```
 
 ### ingress
 
